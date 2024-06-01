@@ -1,0 +1,140 @@
+/* M E S S A G E S */
+:host {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.6rem;
+  padding-inline: 20%;
+}
+
+.loading-section {
+  gap: 3rem;
+}
+
+.chat-container {
+  position: relative;
+  height: 80%;
+}
+
+.chat-header {
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.1em;
+}
+
+.chat {
+  padding-inline: 2rem;
+  background: none;
+  position: absolute;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.3rem;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.sender {
+  align-self: flex-end;
+}
+
+.receiver {
+  align-self: flex-start;
+}
+
+.chat::-webkit-scrollbar {
+  display: none;
+}
+
+.chat {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.msg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #eef8ff;
+  min-width: 0.8rem;
+  padding: 0.7rem;
+  border-radius: 3px;
+  word-break: break-all;
+  max-width: 45%;
+}
+
+.msg h1 {
+  margin: 0;
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+
+.msg p {
+  font-size: 1.1em;
+  margin: 0;
+  color: #777;
+  transition: all 0.2s ease;
+}
+
+.input-fields {
+  padding-inline: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  padding-bottom: 1rem;
+}
+
+.field {
+  width: 100%;
+  padding: 1rem 1rem;
+  position:relative;
+}
+
+.field{
+  border-radius: 4px;
+  padding: .3rem;
+  background: var(--btn-gradient);
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.field input{
+    border-radius: 4px;
+    width:100%;
+    height:100%;
+    padding:.8rem;
+    background-color:var(--bg);
+    border:none;
+    outline:none;
+}
+
+.btn {
+  border-radius: 4px;
+  padding: 1rem 1rem;
+}
+
+.primary {
+  background: var(--btn-gradient);
+  color: white;
+}
+
+.secondary {
+    background: var(--btn-hover);
+    color:white;
+}
+
+.secondary:hover {
+  background: var(--btn-gradient);
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: scale(1.05);
+}
+
+.primary:hover {
+  background: var(--btn-hover);
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: scale(1.05);
+}

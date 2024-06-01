@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --text-gradient:linear-gradient(to right, #7C0FCF 0%, #EC0D66 100%);
+    --btn-gradient:linear-gradient(to right, #7c0fcf77 -100%, #ec0d6671 100%);
+    --btn-hover:linear-gradient(to right, #7c0fcfa8 -100%, #ec0d6696 100%);
+    --bg:#fff;
+
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #7C0FCF 0%, #EC0D66 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-btn {
+    background: linear-gradient(to right, #7c0fcf77 -100%, #ec0d6671 100%);
+}
+
+html, body { margin: 0; height:100%; font-family: Roboto, "Helvetica Neue", sans-serif; }
+#app {
+    display:block;
+    display:flex;
+    flex-direction: column;
+    height:100%
+}
+
+.btn {
+    border-radius:4px;
+    background-color: var(--primary);
+    padding:1rem 1rem;
+}
+
+.primary {
+    background-color:#7C0FCF;
+    color:white;
+}
+
+.primary:hover {
+    background-color:#5a0f94;
+    transition:.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform:scale(1.05);
+}

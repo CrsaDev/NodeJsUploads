@@ -1,0 +1,28 @@
+.header {
+    padding:1rem 1rem;
+    border-bottom:1px solid black;
+}
+
+.header-p {
+    align-self:center;
+}
+
+.header h1,.header p,.header a{
+    margin:0
+}
+
+.header h1{
+    text-transform: uppercase;
+}
+
+.header ul {
+    gap:3.5rem;
+
+    list-style-type:none;
+    text-decoration: none;
+}
+
+.header ul li a{
+    color:rgb(33, 37, 41);
+    text-decoration: none;
+}

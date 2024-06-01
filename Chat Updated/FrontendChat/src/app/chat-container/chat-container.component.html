@@ -1,0 +1,10 @@
+<div class="chat-container">
+    @for (msg of chat.messages; track $index) {
+        @if (msg.sender == client.id) {
+            <p class="msg sender">Me: {{msg.msg}}</p>
+        } 
+        @else {
+            <p class="msg receiver">Stranger: {{msg.msg}}</p>
+        }
+    }
+</div>

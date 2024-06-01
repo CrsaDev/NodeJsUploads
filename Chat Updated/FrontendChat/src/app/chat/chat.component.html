@@ -1,0 +1,37 @@
+@if (matchedUser == "") {
+    <div class="d-flex flex-column justify-content-center align-items-center loading-section">
+        @if (statusMsg != "") {
+            <p>{{ statusMsg }}</p>
+        }
+
+        @if (!isSearching) {
+            <button class="btn primary align-self-center" (click)="search()">Search</button>
+        } @else {
+            <div class="d-flex flex-column justify-content-center align-items-center loading-section">
+                <mat-spinner [color]="color"></mat-spinner>
+                <p>Looking for another user to connect to...</p>
+            </div>    
+        }   
+    </div>
+} @else {   
+    <h1 class="chat-header gradient-text">Connected to a stranger</h1>
+    <div class="chat-container">
+        <div class="chat">
+                @for (msg of chat.messages; track $index) {
+                    <div class="msg" [class.sender]="msg.sender === client.id" [class.receiver]="msg.sender !== client.id">
+                        <h1 class="gradient-text">{{ msg.sender === client.id ? 'Me' : 'Stranger' }} </h1>
+                        <p>{{ msg.msg }}</p>
+                    </div>
+                }
+        </div> 
+    </div>
+    <div class="input-fields">
+        <div class="field">
+            <input type="text" #msgInput [(ngModel)]="chatMsg" (keydown.enter)="send();false;msgInput.value=''" placeholder="Say something">
+        </div>
+
+        <button class="btn primary" (click)="send();false;msgInput.value=''">Send</button>
+        <button class="btn secondary" (click)="disconnect()">Disconnect</button>
+    </div>
+    
+}
